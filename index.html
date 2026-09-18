@@ -3,81 +3,741 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Altra</title>
+
+  <title>Altra | Smart Digital Solutions</title>
+
+  <meta name="description"
+        content="Altra provides smart digital solutions designed to make everyday transactional communication simpler.">
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f8ff;
-      color: #123b8f;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #102a56;
+      background: #ffffff;
+      line-height: 1.6;
     }
 
-    .container {
-      width: 90%;
-      max-width: 700px;
-      padding: 40px 20px;
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #e8edf5;
+    }
+
+    nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .logo {
-      font-size: 52px;
-      font-weight: bold;
-      margin-bottom: 15px;
+      font-size: 30px;
+      font-weight: 800;
+      color: #1455c0;
+      letter-spacing: -1px;
     }
 
-    .tagline {
-      font-size: 20px;
-      color: #333;
-      margin-bottom: 30px;
+    .logo span {
+      color: #102a56;
     }
 
-    .button {
-      display: inline-block;
-      padding: 14px 30px;
-      background: #174ea6;
-      color: white;
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
       text-decoration: none;
+      color: #102a56;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #1455c0;
+    }
+
+    .nav-button {
+      background: #1455c0;
+      color: white !important;
+      padding: 11px 20px;
+      border-radius: 25px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 85% 20%, #dceaff 0%, transparent 28%),
+        linear-gradient(135deg, #f7faff 0%, #ffffff 55%, #eef5ff 100%);
+    }
+
+    .hero-content {
+      max-width: 1150px;
+      width: 100%;
+      margin: auto;
+      padding: 80px 25px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+      color: #102a56;
+    }
+
+    .hero h1 span {
+      color: #1455c0;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #5d6b82;
+      max-width: 590px;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+      display: inline-block;
+      padding: 15px 27px;
       border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .primary-btn {
+      background: #1455c0;
+      color: white;
+    }
+
+    .primary-btn:hover {
+      background: #0c3f92;
+      transform: translateY(-2px);
+    }
+
+    .secondary-btn {
+      border: 2px solid #1455c0;
+      color: #1455c0;
+      background: white;
+    }
+
+    .secondary-btn:hover {
+      background: #eef5ff;
+    }
+
+    /* HERO CARD */
+
+    .hero-card {
+      background: white;
+      border-radius: 30px;
+      padding: 35px;
+      box-shadow: 0 25px 60px rgba(20, 85, 192, 0.15);
+      border: 1px solid #e7eef9;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 35px;
+    }
+
+    .mini-logo {
+      font-size: 22px;
+      font-weight: 800;
+      color: #1455c0;
+    }
+
+    .status {
+      background: #e8f8ee;
+      color: #18894d;
+      padding: 7px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .balance-label {
+      color: #7a879b;
+      font-size: 14px;
+    }
+
+    .balance {
+      font-size: 38px;
+      font-weight: 800;
+      color: #102a56;
+      margin: 8px 0 30px;
+    }
+
+    .transaction {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-top: 1px solid #edf0f5;
+    }
+
+    .transaction-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .transaction-icon {
+      width: 42px;
+      height: 42px;
+      background: #eef5ff;
+      color: #1455c0;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: bold;
+    }
+
+    .transaction small {
+      color: #7a879b;
+    }
+
+    .amount {
+      font-weight: 700;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 90px 25px;
+    }
+
+    .section-container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 55px;
+    }
+
+    .section-heading h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+      color: #102a56;
+    }
+
+    .section-heading p {
+      color: #68758a;
       font-size: 17px;
     }
 
-    .button:hover {
-      background: #0d3b82;
+    /* SERVICES */
+
+    .services {
+      background: #ffffff;
     }
 
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .service-card {
+      padding: 35px 28px;
+      border: 1px solid #e5ebf4;
+      border-radius: 22px;
+      background: white;
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 40px rgba(16, 42, 86, 0.08);
+    }
+
+    .service-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: #eaf2ff;
+      color: #1455c0;
+      font-size: 25px;
+      margin-bottom: 22px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 12px;
+      font-size: 21px;
+    }
+
+    .service-card p {
+      color: #68758a;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: #f6f9ff;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #65738a;
+      margin-bottom: 20px;
+      font-size: 17px;
+    }
+
+    .about-list {
+      list-style: none;
+    }
+
+    .about-list li {
+      margin: 14px 0;
+      font-weight: 600;
+    }
+
+    .about-list li::before {
+      content: "✓";
+      color: #1455c0;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .about-card {
+      background: #1455c0;
+      color: white;
+      border-radius: 30px;
+      padding: 45px;
+      box-shadow: 0 25px 50px rgba(20, 85, 192, 0.2);
+    }
+
+    .about-card h3 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .about-card p {
+      color: #e4edff;
+    }
+
+    /* CTA */
+
+    .cta {
+      background: #102a56;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 43px;
+      margin-bottom: 18px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: auto auto 30px;
+      color: #cbd7ea;
+      font-size: 17px;
+    }
+
+    .cta .primary-btn {
+      background: white;
+      color: #1455c0;
+    }
+
+    /* FOOTER */
+
     footer {
-      margin-top: 50px;
-      font-size: 14px;
-      color: #777;
+      background: #081a35;
+      color: #b9c6d9;
+      padding: 55px 25px 25px;
+    }
+
+    .footer-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 50px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      max-width: 420px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin: 10px 0;
+    }
+
+    footer a {
+      color: #b9c6d9;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      max-width: 1150px;
+      margin: 40px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #243653;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-content,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding-top: 65px;
+        padding-bottom: 65px;
+      }
+
+      .hero-card {
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading h2,
+      .about h2,
+      .cta h2 {
+        font-size: 34px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
-    <div class="logo">Altra</div>
+  <!-- NAVIGATION -->
 
-    <div class="tagline">
-      Smart solutions for a better digital future.
+  <header>
+    <nav>
+      <div class="logo">altra<span>.</span></div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-button">Get Started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div>
+        <h1>
+          Smart solutions.<br>
+          <span>Simply Altra.</span>
+        </h1>
+
+        <p>
+          Altra is building smart digital solutions that make
+          business, payments and everyday transactions simpler,
+          faster and more connected.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#services" class="primary-btn">Explore Altra</a>
+          <a href="#about" class="secondary-btn">Learn More</a>
+        </div>
+      </div>
+
+
+      <div class="hero-card">
+
+        <div class="card-top">
+          <div class="mini-logo">altra.</div>
+          <div class="status">● Active</div>
+        </div>
+
+        <div class="balance-label">Available Balance</div>
+        <div class="balance">GH₵ 12,450.00</div>
+
+        <div class="transaction">
+          <div class="transaction-left">
+            <div class="transaction-icon">↓</div>
+            <div>
+              <strong>Money Received</strong><br>
+              <small>Today</small>
+            </div>
+          </div>
+          <div class="amount">+ GH₵500</div>
+        </div>
+
+        <div class="transaction">
+          <div class="transaction-left">
+            <div class="transaction-icon">↑</div>
+            <div>
+              <strong>Payment</strong><br>
+              <small>Yesterday</small>
+            </div>
+          </div>
+          <div class="amount">- GH₵120</div>
+        </div>
+
+      </div>
+
     </div>
 
-    <a href="#" class="button">Get Started</a>
+  </section>
 
-    <footer>
+
+  <!-- SERVICES -->
+
+  <section class="services" id="services">
+
+    <div class="section-container">
+
+      <div class="section-heading">
+        <h2>What Altra Offers</h2>
+        <p>
+          Technology designed around simplicity, connection
+          and smarter digital experiences.
+        </p>
+      </div>
+
+
+      <div class="service-grid">
+
+        <div class="service-card">
+          <div class="service-icon">₵</div>
+          <h3>Digital Payments</h3>
+          <p>
+            Simple digital payment solutions designed to
+            support modern transactions and businesses.
+          </p>
+        </div>
+
+
+        <div class="service-card">
+          <div class="service-icon">↔️</div>
+          <h3>Smart Transactions</h3>
+          <p>
+            Manage and organize transactions through a
+            clean and connected digital experience.
+          </p>
+        </div>
+
+
+        <div class="service-card">
+          <div class="service-icon">✦</div>
+          <h3>Smart Technology</h3>
+          <p>
+            Innovative software solutions built to help
+            businesses and users work smarter.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <div class="section-container">
+
+      <div class="about-grid">
+
+        <div>
+          <h2>Built for the future.</h2>
+
+          <p>
+            Altra is focused on creating practical technology
+            that connects people, businesses and digital
+            financial services.
+          </p>
+
+          <p>
+            Our goal is simple: make digital experiences
+            easier to understand and easier to use.
+          </p>
+
+          <ul class="about-list">
+            <li>Simple digital experiences</li>
+            <li>Business-focused technology</li>
+            <li>Smart transaction solutions</li>
+            <li>Designed for everyday users</li>
+          </ul>
+        </div>
+
+
+        <div class="about-card">
+          <h3>One platform.</h3>
+
+          <p>
+            A growing ecosystem of digital tools designed
+            to help people and businesses move forward.
+          </p>
+
+          <br>
+
+          <p>
+            Altra combines simplicity, technology and
+            innovation into one connected experience.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CALL TO ACTION -->
+
+  <section class="cta" id="contact">
+
+    <div class="section-container">
+
+      <h2>Ready to discover Altra?</h2>
+
+      <p>
+        Join us as we build smarter digital experiences
+        for businesses and everyday users.
+      </p>
+
+      <a href="mailto:info@altra.com" class="primary-btn">
+        Contact Altra
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>altra.</h3>
+        <p>
+          Smart digital solutions for a connected future.
+        </p>
+      </div>
+
+
+      <div>
+        <h3>Explore</h3>
+
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+
+
+      <div>
+        <h3>Connect</h3>
+
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
       ©️ 2026 Altra. All rights reserved.
-    </footer>
-  </div>
+    </div>
+
+  </footer>
 
 </body>
 </html>
