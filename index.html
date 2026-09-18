@@ -6,10 +6,8 @@
 
   <title>Altra Black and White Business Trading | Altrafloat</title>
 
-  <meta
-    name="description"
-    content="Altra Black and White Business Trading develops smart digital solutions, including Altrafloat."
-  >
+  <meta name="description"
+        content="Altra Black and White Business Trading develops smart digital solutions, including Altrafloat.">
 
   <style>
     * {
@@ -25,10 +23,6 @@
       background: #ffffff;
       line-height: 1.6;
     }
-
-    /* =========================
-       HEADER
-    ========================= */
 
     header {
       position: sticky;
@@ -82,27 +76,13 @@
       border-radius: 25px;
     }
 
-    /* =========================
-       HERO
-    ========================= */
-
     .hero {
       min-height: 680px;
       display: flex;
       align-items: center;
-
       background:
-        radial-gradient(
-          circle at 85% 20%,
-          #dceaff 0%,
-          transparent 28%
-        ),
-        linear-gradient(
-          135deg,
-          #f7faff 0%,
-          #ffffff 55%,
-          #eef5ff 100%
-        );
+        radial-gradient(circle at 85% 20%, #dceaff 0%, transparent 28%),
+        linear-gradient(135deg, #f7faff 0%, #ffffff 55%, #eef5ff 100%);
     }
 
     .hero-content {
@@ -110,7 +90,6 @@
       width: 100%;
       margin: auto;
       padding: 80px 25px;
-
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 60px;
@@ -143,7 +122,7 @@
       font-size: 19px;
       color: #5d6b82;
       max-width: 620px;
-      margin-bottom: 35px;
+      margin-bottom: 25px;
     }
 
     .hero-buttons {
@@ -181,10 +160,6 @@
     .secondary-btn:hover {
       background: #eef5ff;
     }
-
-    /* =========================
-       ALTRAFLOAT CARD
-    ========================= */
 
     .float-card {
       background: white;
@@ -255,10 +230,6 @@
       color: #7a879b;
     }
 
-    /* =========================
-       SECTIONS
-    ========================= */
-
     section {
       padding: 90px 25px;
     }
@@ -284,10 +255,6 @@
       color: #68758a;
       font-size: 17px;
     }
-
-    /* =========================
-       ALTRAFLOAT
-    ========================= */
 
     .altrafloat {
       background: #ffffff;
@@ -332,10 +299,6 @@
     .float-box p {
       color: #68758a;
     }
-
-    /* =========================
-       BUSINESS
-    ========================= */
 
     .business {
       background: #f6f9ff;
@@ -392,10 +355,6 @@
       color: #e4edff;
     }
 
-    /* =========================
-       MISSION
-    ========================= */
-
     .mission {
       background: white;
     }
@@ -419,10 +378,6 @@
       font-size: 18px;
     }
 
-    /* =========================
-       CTA
-    ========================= */
-
     .cta {
       background: #102a56;
       color: white;
@@ -441,14 +396,52 @@
       font-size: 17px;
     }
 
-    .cta .primary-btn {
-      background: white;
-      color: #1455c0;
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 25px;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+      display: inline-block;
+      padding: 15px 27px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1da851;
+      transform: translateY(-2px);
+    }
+
+    .email-btn {
+      background: white;
+      color: #1455c0;
+      display: inline-block;
+      padding: 15px 27px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .email-btn:hover {
+      background: #eef5ff;
+      transform: translateY(-2px);
+    }
+
+    .contact-details {
+      margin-top: 28px;
+      color: #cbd7ea;
+      font-size: 15px;
+    }
 
     footer {
       background: #081a35;
@@ -490,6 +483,12 @@
       color: white;
     }
 
+    .legal-name {
+      margin-top: 12px;
+      color: #8797ae;
+      font-size: 12px;
+    }
+
     .copyright {
       max-width: 1150px;
       margin: 40px auto 0;
@@ -498,16 +497,6 @@
       text-align: center;
       font-size: 13px;
     }
-
-    .legal-name {
-      margin-top: 10px;
-      color: #8797ae;
-      font-size: 12px;
-    }
-
-    /* =========================
-       MOBILE
-    ========================= */
 
     @media (max-width: 850px) {
 
@@ -556,9 +545,7 @@
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+  <!-- HEADER -->
 
   <header>
     <nav>
@@ -568,19 +555,32 @@
       </div>
 
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#altrafloat">Altrafloat</a></li>
-        <li><a href="#business">Business</a></li>
-        <li><a href="#contact" class="nav-button">Contact</a></li>
+
+        <li>
+          <a href="#home">Home</a>
+        </li>
+
+        <li>
+          <a href="#altrafloat">Altrafloat</a>
+        </li>
+
+        <li>
+          <a href="#business">Business</a>
+        </li>
+
+        <li>
+          <a href="#contact" class="nav-button">
+            Contact
+          </a>
+        </li>
+
       </ul>
 
     </nav>
   </header>
 
 
-  <!-- =========================
-       HERO
-  ========================= -->
+  <!-- HERO -->
 
   <section class="hero" id="home">
 
@@ -598,15 +598,16 @@
         </h1>
 
         <p>
-          Altra Black and White Business Trading is a growing
-          business focused on developing practical digital
-          solutions for modern businesses and everyday users.
+          Altra Black and White Business Trading is a
+          growing business focused on developing practical
+          digital solutions for modern businesses and
+          everyday users.
         </p>
 
         <p>
-          Our digital application, <strong>Altrafloat</strong>,
-          is part of our vision to create simpler and smarter
-          digital experiences.
+          Our digital application,
+          <strong>Altrafloat</strong>, is part of our vision
+          to create simpler and smarter digital experiences.
         </p>
 
         <div class="hero-buttons">
@@ -694,9 +695,7 @@
   </section>
 
 
-  <!-- =========================
-       ALTRAFLOAT
-  ========================= -->
+  <!-- ALTRAFLOAT -->
 
   <section class="altrafloat" id="altrafloat">
 
@@ -704,12 +703,14 @@
 
       <div class="section-heading">
 
-        <h2>Meet Altrafloat</h2>
+        <h2>
+          Meet Altrafloat
+        </h2>
 
         <p>
           Altrafloat is a digital application developed
-          as part of Altra Black and White Business Trading's
-          technology vision.
+          as part of Altra Black and White Business
+          Trading's technology vision.
         </p>
 
       </div>
@@ -723,7 +724,9 @@
             ₵
           </div>
 
-          <h3>Digital Payments</h3>
+          <h3>
+            Digital Payments
+          </h3>
 
           <p>
             Technology designed to support convenient
@@ -739,7 +742,9 @@
             ↔️
           </div>
 
-          <h3>Smart Transactions</h3>
+          <h3>
+            Smart Transactions
+          </h3>
 
           <p>
             A connected environment designed to make
@@ -755,7 +760,9 @@
             ✦
           </div>
 
-          <h3>Smart Technology</h3>
+          <h3>
+            Smart Technology
+          </h3>
 
           <p>
             Practical software solutions designed around
@@ -771,9 +778,7 @@
   </section>
 
 
-  <!-- =========================
-       BUSINESS
-  ========================= -->
+  <!-- BUSINESS -->
 
   <section class="business" id="business">
 
@@ -788,9 +793,10 @@
           </h2>
 
           <p>
-            Our business is focused on creating and developing
-            opportunities through technology, digital services
-            and innovative business solutions.
+            Our business is focused on creating and
+            developing opportunities through technology,
+            digital services and innovative business
+            solutions.
           </p>
 
           <p>
@@ -828,17 +834,17 @@
           </h3>
 
           <p>
-            To build practical digital solutions that connect
-            businesses and people while creating opportunities
-            for a more connected digital future.
+            To build practical digital solutions that
+            connect businesses and people while creating
+            opportunities for a more connected digital future.
           </p>
 
           <br>
 
           <p>
-            <strong>Altrafloat</strong> is part of this vision
-            and represents our continued development in
-            digital technology.
+            <strong>Altrafloat</strong> is part of this
+            vision and represents our continued development
+            in digital technology.
           </p>
 
         </div>
@@ -850,9 +856,7 @@
   </section>
 
 
-  <!-- =========================
-       MISSION
-  ========================= -->
+  <!-- MISSION -->
 
   <section class="mission">
 
@@ -877,38 +881,63 @@
   </section>
 
 
-  <!-- =========================
-       CONTACT / CTA
-  ========================= -->
+  <!-- CONTACT -->
 
   <section class="cta" id="contact">
 
     <div class="section-container">
 
       <h2>
-        Discover Altrafloat
+        Contact Altra
       </h2>
 
       <p>
-        Learn more about Altra Black and White Business Trading
-        and our growing digital technology ecosystem.
+        Connect with Altra Black and White Business Trading
+        to learn more about Altrafloat and our digital
+        solutions.
       </p>
 
-      <a
-        href="mailto:YOUR-EMAIL@example.com"
-        class="primary-btn"
-      >
-        Contact Us
-      </a>
+
+      <div class="contact-buttons">
+
+        <a
+          href="https://wa.me/233271654148"
+          class="whatsapp-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp Us
+        </a>
+
+
+        <a
+          href="mailto:AltraBWTB@gmail.com"
+          class="email-btn"
+        >
+          Email Us
+        </a>
+
+      </div>
+
+
+      <div class="contact-details">
+
+        WhatsApp:
+        <strong>+233 27 165 4148</strong>
+
+        <br>
+
+        Email:
+        <strong>AltraBWTB@gmail.com</strong>
+
+      </div>
 
     </div>
 
   </section>
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -942,15 +971,21 @@
         <ul>
 
           <li>
-            <a href="#home">Home</a>
+            <a href="#home">
+              Home
+            </a>
           </li>
 
           <li>
-            <a href="#altrafloat">Altrafloat</a>
+            <a href="#altrafloat">
+              Altrafloat
+            </a>
           </li>
 
           <li>
-            <a href="#business">Business</a>
+            <a href="#business">
+              Business
+            </a>
           </li>
 
         </ul>
@@ -961,24 +996,24 @@
       <div>
 
         <h3>
-          Connect
+          Contact
         </h3>
 
         <ul>
 
           <li>
-            <a href="#contact">Contact</a>
-          </li>
-
-          <li>
-            <a href="#">
-              Privacy Policy
+            <a
+              href="https://wa.me/233271654148"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
             </a>
           </li>
 
           <li>
-            <a href="#">
-              Terms & Conditions
+            <a href="mailto:AltraBWTB@gmail.com">
+              Email
             </a>
           </li>
 
